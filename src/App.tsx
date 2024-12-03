@@ -8,11 +8,12 @@ import { BrowserRouter } from 'react-router-dom'
 import Routes from 'routes'
 import { Toaster } from 'sonner'
 import { theme } from 'styles/theme'
+import vi_VN from 'antd/locale/vi_VN'
 
 function App() {
   return (
     <BrowserRouter>
-      <ConfigProvider componentSize="middle" theme={theme}>
+      <ConfigProvider locale={vi_VN} componentSize="middle" theme={theme}>
         <QueryClientProvider client={queryClient}>
           <Suspense fallback={<LoadingPage />}>
             <Routes />
